@@ -1,0 +1,817 @@
+html {
+    /* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
+    font-family: "Roboto", "Noto Sans KR", sans-serif;
+}
+
+/* 노말라이즈 */
+body,
+ul,
+li,
+h1,
+h2,
+h4 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow-x: hidden;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+label[for] {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* 라이브러리 */
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.absolute-left {
+    position: absolute;
+    left: 0;
+}
+
+.absolute-right {
+    position: absolute;
+    right: 0;
+}
+
+.absolute-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+.absolute-top {
+    position: absolute;
+    top: 0;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.absolute-middle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.absolute-middle.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.relative {
+    position: relative;
+}
+
+.cell {
+    float: left;
+    box-sizing: border-box;
+}
+
+.cell-right {
+    float: right;
+    box-sizing: border-box;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.img-box > img {
+    width: 100%;
+    display: block;
+}
+
+.con {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-0-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+.line-height-0 {
+    line-height: 0;
+}
+
+.line-height-0 > * {
+    line-height: normal;
+}
+
+.width-30px {
+    width: 30px;
+}
+
+.width-35px {
+    width: 35px;
+}
+
+.width-40px {
+    width: 35px;
+}
+
+.width-45px {
+    width: 35px;
+}
+
+.width-50px {
+    width: 50px;
+}
+
+.width-80px {
+    width: 80px;
+}
+
+.width-100px {
+    width: 100px;
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.width-60p {
+    width: 60%;
+}
+
+.width-55p {
+    width: 55%;
+}
+
+.width-50p {
+    width: 50%;
+}
+
+.width-45p {
+    width: 45%;
+}
+
+.width-40p {
+    width: 40%;
+}
+
+.width-30p {
+    width: 30%;
+}
+
+.width-35p {
+    width: 35%;
+}
+
+.width-100p-except-30px {
+    width: calc(100% - 30px);
+}
+
+.width-100p-except-35px {
+    width: calc(100% - 35px);
+}
+
+.width-100p-except-40px {
+    width: calc(100% - 40px);
+}
+
+.width-100p-except-50px {
+    width: calc(100% - 50px);
+}
+
+.width-100p-except-80px {
+    width: calc(100% - 80px);
+}
+
+.width-100p-except-100px {
+    width: calc(100% - 100px);
+}
+
+.height-100p {
+    height: 100%;
+}
+
+.height-50p {
+    height: 50%;
+}
+
+.border-box {
+    box-sizing: border-box;
+}
+
+.font-size-dot-8rem {
+    font-size: .8rem;
+}
+
+.table-row {
+    display: table;
+}
+
+.table-row.row::after {
+    display: inline;
+    clear: non;
+}
+
+.table-row > .cell {
+    float: none;
+    display: table-cell;
+}
+
+.border-red {
+    border: 10px solid red;
+}
+
+.border-green {
+    border: 10px solid green;
+}
+
+.border-blue {
+    border: 10px solid blue;
+}
+
+.border-gold {
+    border: 10px solid gold;
+}
+
+.border-pink {
+    border: 10px solid pink;
+}
+
+/* 라이브러리 - flex */
+* > .flex {
+    display: flex;
+}
+
+* > .flex-grow-1 {
+    flex-grow: 1;
+}
+
+* > .flex-jc-c {
+    justify-content: center;
+}
+
+* > .flex-jc-s {
+    justify-content: flex-start;
+}
+
+* > .flex-jc-e {
+    justify-content: flex-end;
+}
+
+* > .flex-jc-sb {
+    justify-content: space-between;
+}
+
+* > .flex-ai-c {
+    align-items: center;
+}
+
+* > .flex-ai-s {
+    align-items: flex-start;
+}
+
+* > .flex-ai-e {
+    align-items: flex-end;
+}
+
+* > .flex-as-s {
+    align-self: stretch;
+}
+
+* > .flex-as-c {
+    align-self: center;
+}
+
+* > .flex-as-s {
+    align-self: flex-start;
+}
+
+* > .flex-as-e {
+    align-self: flex-end;
+}
+
+* > .flex-column-nowrap {
+    flex-flow: column nowrap;
+}
+
+* > .flex-column-wrap {
+    flex-flow: column wrap;
+}
+
+* > .flex-row-wrap {
+    flex-flow: row wrap;
+}
+
+.flex-ch-basis-0 > * {
+    flex-basis: 0;
+}
+
+* > .flex-1-0-0 {
+    flex: 1 0 0;
+}
+
+/* 커스텀 */
+
+.con {
+    width: 95%;
+}
+
+.table_con {
+    width: 90%;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt-15 {
+    margin-top: -15px;
+}
+
+/* 스킵네비 시작 */
+/*
+.skiptoContent {
+	position: absolute;
+	margin: 0 auto;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.skiptoContent a {
+	position: absolute;
+	width: 100%;
+	font-size: 0;
+	top: -50px;
+}
+.skiptoContent a:active, .skiptoContent a:focus {
+	display: block;
+	font-size: 16px;
+	padding: 10px;
+	top: 0;
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
+	background: #000;
+	outline: 0;
+}
+*/
+/* 스킵네비 끝 */
+
+/* 줄바꿈 */
+html {
+    word-break: keep-all;
+}
+
+/* 더보기버튼 시작 */
+.more-btn {
+    background-color: #4180ea;
+    width: 70px;
+    display: block;
+    border-radius: 10px;
+    height: 30px;
+    position: relative;
+}
+
+.more-btn-1 {
+    margin-right: 0px;
+}
+
+.more-btn > a {
+    padding: 5px 10px;
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.more-btn > a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-50%);
+    right: -8%;
+    background-image: url(./image/viewmore_ico.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 12px;
+    height: 12px;
+}
+
+/* 더보기버튼 끝 */
+
+.title-area-1 {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 헤더 시작 */
+#header {
+    background-color: #3f4658;
+    height: 100px;
+}
+
+.top-bar > ul > li > .logo {
+    display: block;
+    margin-top: 8px;
+}
+
+.top-bar > ul > li:last-child > a {
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-top: 27px;
+    display: block;
+}
+
+/* 헤더 끝 */
+
+
+/* 컨텐츠 시작 */
+#content_wrapper {
+    width: 100%;
+    background-color: #d7dbe6;
+    height: auto;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+
+#content_wrapper h4 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    text-align: right;
+    padding-right: 60px;
+}
+
+#content_wrapper h2 {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+#content_wrapper .white-box {
+    background-color: #fff;
+    height: auto;
+    padding-bottom: 50px;
+    border-radius: 15px;
+}
+
+#content_wrapper .white-box .left {
+    width: 40%;
+    margin-left: 40px;
+    height: auto;
+}
+
+#content_wrapper .white-box .right {
+    width: 53%;
+    margin-right: 40px;
+}
+
+/* 테이블 시작 */
+table caption {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    display: none;
+}
+
+.data_table {
+    width: 100%;
+    line-height: 140%;
+    margin-top: 10px;
+}
+
+.data_table_1 {
+    line-height: 140%;
+    margin-top: 10px;
+    margin-right: -50px;
+
+}
+
+.data_table_con {
+    width: 90%;
+    line-height: 140%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.data_table_mt0 {
+    margin-top: 0;
+    width: 100%;
+    line-height: 140%;
+}
+
+.data_table_mt0 th {
+    background-color: #ebf2f5;
+    border: #d8e4ef 1px solid;
+    font-weight: 700;
+    text-align: center;
+    font-size: 15px;
+    width: auto;
+    padding: 3px 10px;
+}
+
+.data_table_1 th {
+    background-color: #ebf2f5;
+    border: #d8e4ef 1px solid;
+    font-weight: 700;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 15px;
+    height: 25px;
+}
+
+
+.data_table_1 td {
+    border: #d8e4ef 1px solid;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.data_table_con tr {
+    border: #d8e4ef 1px solid;
+}
+
+.data_table_con th {
+    background-color: #ebf2f5;
+    border: #d8e4ef 1px solid;
+    font-weight: 700;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.data_table_con td {
+    border: #d8e4ef 1px solid;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table_con_txt {
+    margin-left: 30px;
+}
+
+.data_table tr {
+    border: #d8e4ef 1px solid;
+}
+
+.data_table th {
+    background-color: #ebf2f5;
+    border: #d8e4ef 1px solid;
+    font-weight: 700;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.data_table td {
+    border: #d8e4ef 1px solid;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.data_table_2 {
+    width: 100%;
+    line-height: 140%;
+    margin-top: 10px;
+}
+
+.data_table_2 th {
+    background-color: #ebf2f5;
+    border: #d8e4ef 1px solid;
+    font-weight: 700;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.data_table_2 td {
+    border: #d8e4ef 1px solid;
+    padding: 3px 10px;
+    ;
+    text-align: center;
+    font-size: 14px;
+}
+
+.table_wrap {
+    overflow: auto;
+}
+
+/* 테이블 끝 */
+
+/* 텝메뉴 시작 */
+.tab-list-1 {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.tab-menu {
+    width: 100%;
+}
+
+.tab-type-1 > .head {
+    background-color: #4c5366;
+    position: relative
+}
+
+.tab-type-1 > .head > ul > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tab-type-1 > .head > ul > li > a::after {
+    height: 4px;
+    background-color: #4180ea;
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    transition: width 0.3s;
+}
+
+.tab-type-1 > .head > ul > li.active > a::after {
+    width: 80px;
+}
+
+.tab-type-1 > .body {
+    border: 1px solid #d8e4ef;
+    height:748px;
+    
+    overflow: auto;
+}
+
+.tab-type-1 > .body > ul > li {
+    display: none;
+}
+
+.tab-type-1 > .body > ul > li.active {
+    display: block;
+}
+
+.tab-type-1 > .body > ul > li > .data_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #000;
+    width: 90%;
+    height: 230px;
+    /*너비는 임시*/
+}
+/* 탭메뉴 끝 */
+
+/* 컨텐츠 끝*/
+
+
+/* 반응형 테이블 가로스크롤 */
+@media (min-width:976px) and (max-width:1660px) {
+    #content_wrapper .white-box .left {
+        width: 40%;
+        overflow: auto;
+    }
+
+    #content_wrapper .white-box .right {
+        width: 50%;
+        overflow: auto;
+    }
+}
+
+
+@media (min-width:740px) and (max-width:976px) {
+    #content_wrapper .white-box .left {
+        width:37.5%;
+        overflow: auto;
+    }
+
+    #content_wrapper .white-box .right {
+        width: 47.5%;
+        overflow: auto;
+    }
+}
+
+
+@media (min-width:400px) and (max-width:740px) {
+
+    #header {
+        background-color: #3f4658;
+        height: 80px;
+    }
+
+    .top-bar > ul {
+        margin-left: 30px;
+    }
+
+    .top-bar > ul > li > .logo {
+        display: block;
+        margin-top: 3px;
+    }
+
+    .top-bar > ul > li:last-child > a {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 15px;
+        margin-top: 27px;
+        display: block;
+        font-size: 20px;
+    }
+
+    #content_wrapper {
+        height: inherit;
+        padding-bottom: 50px;
+    }
+
+
+    #content_wrapper h4 {
+        font-size: 15px;
+        font-weight: 500;
+        text-align: right;
+        padding-right: 0;
+        margin-right: 25px;
+        margin-bottom: 0;
+    }
+
+    #content_wrapper .whitespace {
+        padding-top: 15px;
+        margin-top: 5px;
+    }
+
+    #content_wrapper .white-box {
+        background-color: #fff;
+        height: auto;
+        padding-bottom: 30px;
+        border-radius: 15px;
+    }
+
+    #content_wrapper .white-box .left {
+        width: 90%;
+        float: none;
+        margin-right:auto;
+        margin-left: auto;
+    }
+
+    #content_wrapper .white-box .right {
+        float: none;
+        width: 90%;
+        margin-right:auto;
+        margin-left: auto;
+        margin-top: 50px;
+    }
+}

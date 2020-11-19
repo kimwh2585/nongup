@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>농업온 종합관제시스템</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" conetent="width-device-width, initial-scale=1" s>
+    <!-- 폰트어썸 불러오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <!-- css 불러오기 -->
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+
+<body>
+    <! -- skipnav 시작 -->
+        <!-- 
+        <div class="skiptoContent">
+            <a href="#content_wrapper">본문내용 바로가기</a>
+        </div>
+        -->
+        <! -- skipnav 끝 -->
+
+            <! -- 탑바 시작 -->
+                <div id="header">
+                    <div class="top-bar con">
+                        <ul class="row">
+                            <li class="cell">
+                                <a href="#" class="logo">
+                                    <img src="./image/EPISlogo.png" alt="EPIS로고">
+                                </a>
+                            </li>
+                            <li class="cell">
+                                <a href="#">종합관제시스템</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <! -- 탑바 끝 -->
+
+                    <! -- 컨텐츠 시작 -->
+                        <div id="content_wrapper">
+                            <h4 class="con">기준일:2020.08.05</h4>
+                            <div class="white-box con">
+                                <div class="row">
+                                    <div class="left cell">
+                                        <h2 class="mt30 whitespace">이용량</h2>
+                                        <!-- 이용량표 시작 -->
+                                        <div class="table_wrap">
+                                            <table class="data_table">
+                                                <caption>
+                                                    이용량 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:40%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">구분</th>
+                                                        <th scope="col">방문수</th>
+                                                        <th scope="col">방문자수</th>
+                                                        <th scope="col">페이지뷰</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">목표 / 달성률</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>농업온</td>
+                                                        <td>232,394</td>
+                                                        <td>22,312</td>
+                                                        <td>8,223,343</td>
+                                                        <td>223,343</td>
+                                                        <td>44,500 / 52.5%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>공공데이터</td>
+                                                        <td>21,304</td>
+                                                        <td>3,787</td>
+                                                        <td>4,343,444</td>
+                                                        <td>123,343</td>
+                                                        <td>8,000 / 42.4%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>도매시장</td>
+                                                        <td>604</td>
+                                                        <td>203</td>
+                                                        <td>1,334,232</td>
+                                                        <td>83,343</td>
+                                                        <td>300 / 70.5%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 이용량표 끝 -->
+
+                                        <!-- 탭메뉴테이블 시작 -->
+                                        <div class="tab-list-1 con">
+                                            <div class="flex flex-row-wrap">
+                                                <div class="tab-menu">
+                                                    <div class="content tab-type-1">
+                                                        <div class="head">
+                                                            <ul class="flex">
+                                                                <li class="flex-1-0-0 active" data-tab-name="box-1" data-tab-head-item-name="1"><a>농업온</a></li>
+                                                                <li class="flex-1-0-0" data-tab-name="box-1" data-tab-head-item-name="2"><a>공공데이터</a></li>
+                                                                <li class="flex-1-0-0" data-tab-name="box-1" data-tab-head-item-name="3"><a>도매시장</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="body">
+                                                            <ul>
+                                                                <li class="active" data-tab-name="box-1" data-tab-body-item-name="1">
+                                                                    <div class="data_img">이미지영역
+                                                                        <div class="img-box">
+                                                                            <img src="" alt="농업온 현황 이미지">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="title-area-1 mt-15 row">
+                                                                        <h2 class="cell">접근메뉴(농업온)</h2>
+                                                                        <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                농업온데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:60%" />
+                                                                                <col style="width:20%" />
+                                                                                <col style="width:20%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">URL</th>
+                                                                                    <th scope="col">방문자수</th>
+                                                                                    <th scope="col">머문시간</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 농업경영장부메인</td>
+                                                                                    <td>12,221</td>
+                                                                                    <td>34,123</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 간편회계관리</td>
+                                                                                    <td>4,232</td>
+                                                                                    <td>33,233</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터제공 > 농식품가격정보 > 실시간 경매속보</td>
+                                                                                    <td>2,221</td>
+                                                                                    <td>23,343</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 경락가격시각화 > 가격데이터 분석</td>
+                                                                                    <td>1,453</td>
+                                                                                    <td>12,334</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>565</td>
+                                                                                    <td>6,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>최신뉴스 > 기관소식</td>
+                                                                                    <td>332</td>
+                                                                                    <td>3,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 경영진단분석 > 상환관리</td>
+                                                                                    <td>121</td>
+                                                                                    <td>3,321</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 쉽게보는 통계 > 재배면적</td>
+                                                                                    <td>23</td>
+                                                                                    <td>12,22</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>16</td>
+                                                                                    <td>897</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부</td>
+                                                                                    <td>4</td>
+                                                                                    <td>500</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+
+                                                                    <div class="title-area-1 row mt-15">
+                                                                        <h2 class="cell mt30">회원현황(농업온)</h2>
+
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                농업온데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">가입자수</th>
+                                                                                    <th scope="col">탈퇴수</th>
+                                                                                    <th scope="col">휴먼전환</th>
+                                                                                    <th scope="col">전체</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>321</td>
+                                                                                    <td>3</td>
+                                                                                    <td>5</td>
+                                                                                    <td>5,434,234</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </li>
+                                                                <li data-tab-name="box-1" data-tab-body-item-name="2">
+                                                                    <div class="data_img">이미지영역
+                                                                        <div class="img-box">
+                                                                            <img src="" alt="공공데이터 현황 이미지">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="title-area-1 mt-15 row">
+                                                                        <h2 class="cell">접근메뉴(공공데이터)</h2>
+                                                                        <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                공공데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:60%" />
+                                                                                <col style="width:20%" />
+                                                                                <col style="width:20%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">URL</th>
+                                                                                    <th scope="col">방문자수</th>
+                                                                                    <th scope="col">머문시간</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 농업경영장부메인</td>
+                                                                                    <td>12,221</td>
+                                                                                    <td>34,123</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 간편회계관리</td>
+                                                                                    <td>4,232</td>
+                                                                                    <td>33,233</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터제공 > 농식품가격정보 > 실시간 경매속보</td>
+                                                                                    <td>2,221</td>
+                                                                                    <td>23,343</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 경락가격시각화 > 가격데이터 분석</td>
+                                                                                    <td>1,453</td>
+                                                                                    <td>12,334</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>565</td>
+                                                                                    <td>6,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>최신뉴스 > 기관소식</td>
+                                                                                    <td>332</td>
+                                                                                    <td>3,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 경영진단분석 > 상환관리</td>
+                                                                                    <td>121</td>
+                                                                                    <td>3,321</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 쉽게보는 통계 > 재배면적</td>
+                                                                                    <td>23</td>
+                                                                                    <td>12,22</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>16</td>
+                                                                                    <td>897</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부</td>
+                                                                                    <td>4</td>
+                                                                                    <td>500</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="title-area-1 row mt-15">
+                                                                        <h2 class="cell mt30">회원현황(공공데이터)</h2>
+
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                공공데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">가입자수</th>
+                                                                                    <th scope="col">탈퇴수</th>
+                                                                                    <th scope="col">휴먼전환</th>
+                                                                                    <th scope="col">전체</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>321</td>
+                                                                                    <td>3</td>
+                                                                                    <td>5</td>
+                                                                                    <td>5,434,234</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </li>
+                                                                <li data-tab-name="box-1" data-tab-body-item-name="3">
+                                                                    <div class="data_img">이미지영역
+                                                                        <div class="img-box">
+                                                                            <img src="" alt="도매시장 현황 이미지">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="title-area-1 row mt-15">
+                                                                        <h2 class="cell">접근메뉴(도매시장)</h2>
+                                                                        <div class="more-btn cell-right"><a href="#" title="더보기">더보기</a></div>
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                도매시장데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:60%" />
+                                                                                <col style="width:20%" />
+                                                                                <col style="width:20%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">URL</th>
+                                                                                    <th scope="col">방문자수</th>
+                                                                                    <th scope="col">머문시간</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 농업경영장부메인</td>
+                                                                                    <td>12,221</td>
+                                                                                    <td>34,123</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부 > 간편회계관리</td>
+                                                                                    <td>4,232</td>
+                                                                                    <td>33,233</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터제공 > 농식품가격정보 > 실시간 경매속보</td>
+                                                                                    <td>2,221</td>
+                                                                                    <td>23,343</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 경락가격시각화 > 가격데이터 분석</td>
+                                                                                    <td>1,453</td>
+                                                                                    <td>12,334</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>565</td>
+                                                                                    <td>6,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>최신뉴스 > 기관소식</td>
+                                                                                    <td>332</td>
+                                                                                    <td>3,323</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 경영진단분석 > 상환관리</td>
+                                                                                    <td>121</td>
+                                                                                    <td>3,321</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>데이터분석 > 쉽게보는 통계 > 재배면적</td>
+                                                                                    <td>23</td>
+                                                                                    <td>12,22</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>분야별서비스 > 생산기술 > 품종정보</td>
+                                                                                    <td>16</td>
+                                                                                    <td>897</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>영농지원형서비스 > 농업경영장부</td>
+                                                                                    <td>4</td>
+                                                                                    <td>500</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div class="title-area-1 row mt-15">
+                                                                        <h2 class="cell mt30">회원현황(도매시장)</h2>
+
+                                                                    </div>
+                                                                    <div class="table_wrap">
+                                                                        <table class="data_table_con">
+                                                                            <caption>
+                                                                                도매시장데이터 상세보기
+                                                                            </caption>
+                                                                            <colgroup>
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                                <col style="width:25%" />
+                                                                            </colgroup>
+                                                                            <thead>
+                                                                                <tr>
+                                                                                    <th scope="col">가입자수</th>
+                                                                                    <th scope="col">탈퇴수</th>
+                                                                                    <th scope="col">휴먼전환</th>
+                                                                                    <th scope="col">전체</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>321</td>
+                                                                                    <td>3</td>
+                                                                                    <td>5</td>
+                                                                                    <td>5,434,234</td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 탭메뉴테이블 끝 -->
+                                    </div>
+                                    <div class="right cell-right">
+                                        <div class="title-area row mt30">
+                                            <h2 class="cell">공공데이터 활용현황</h2>
+                                            <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                        </div>
+                                        <!-- 공공데이터활용현황표 시작 -->
+                                        <div class="table_wrap">
+                                            <table class="data_table">
+                                                <caption>
+                                                    공공데이터 활용현황 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:20%" />
+                                                    <col style="width:25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">데이터</th>
+                                                        <th scope="col">데이터셋</th>
+                                                        <th scope="col">개방요청</th>
+                                                        <th scope="col">다운로드</th>
+                                                        <th scope="col">openAPI 신청</th>
+                                                        <th scope="col">openAPI 호출</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>농업온</td>
+                                                        <td>232,394</td>
+                                                        <td>22,312</td>
+                                                        <td>8,223,343</td>
+                                                        <td>223,343</td>
+                                                        <td>44,500 / 52.5%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="table_wrap">
+                                            <table class="data_table_mt0 data_table">
+                                                <caption>
+                                                    공공데이터 활용현황 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:15%" />
+                                                    <col style="width:20%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">날짜</th>
+                                                        <th scope="col">파일다운로드</th>
+                                                        <th scope="col">openAPI 호출</th>
+                                                        <th scope="col">openAPI 활용도<br>
+                                                            (파일다운로드 제외)</th>
+                                                        <th scope="col">openAPI 활용도<br>
+                                                            (파일다운로드 포함)</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>20.09.09</td>
+                                                        <td>332</td>
+                                                        <td>1,535</td>
+                                                        <td>117251.45</td>
+                                                        <td>117321.22</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 공공데이터활용현황표 끝 -->
+
+                                        <!-- 영농일지이용현황표 시작 -->
+
+                                        <div class="title-area row mt30">
+                                            <h2 class="cell">영농일지 > 이용현황</h2>
+                                            <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                        </div>
+                                        <div class="table_wrap">
+                                            <table class="data_table data_table_1">
+                                                <caption>
+                                                    영농일지 이용현황 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:15%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:10%" />
+                                                    <col style="width:15%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="2">구분</th>
+                                                        <th scope="colgroup" colspan="3">입출금장부(단식)
+                                                        </th>
+                                                        <th scope="colgroup" colspan="3">회계장부(복식)</th>
+                                                        <th scope="col" rowspan="2">합계</th>
+                                                        <th scope="col" rowspan="2">누적</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">청년창업농</th>
+                                                        <th scope="col">일반</th>
+                                                        <th scope="col">소계</th>
+                                                        <th scope="col">청년창업농</th>
+                                                        <th scope="col">일반</th>
+                                                        <th scope="col">소계</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>영농일지</td>
+                                                        <td>31</td>
+                                                        <td>34</td>
+                                                        <td>65</td>
+                                                        <td>28</td>
+                                                        <td>70</td>
+                                                        <td>98</td>
+                                                        <td>163</td>
+                                                        <td rowspan="2">123,343</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>입출금장부</td>
+                                                        <td>37</td>
+                                                        <td>53</td>
+                                                        <td>90</td>
+                                                        <td>9</td>
+                                                        <td>61</td>
+                                                        <td>70</td>
+                                                        <td>160</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 영농일지이용현황표 끝 -->
+
+                                        <!-- 영농일지입력현황표 시작 -->
+                                        <div class="title-area row mt30">
+                                            <h2 class="cell">영농일지 > 입력현황</h2>
+                                            <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                        </div>
+                                        <div class="table_wrap">
+
+                                            <table class="data_table_2">
+                                                <caption>
+                                                    영농일지 입력현황 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:8%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+                                                    <col style="width:7.666%" />
+
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col" rowspan="3">구분</th>
+                                                        <th scope="colgroup" colspan="6">입출금장부(단식)
+                                                        </th>
+                                                        <th scope="colgroup" colspan="6">회계장부(복식)</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col" colspan="2">청년창업농</th>
+                                                        <th scope="col" colspan="2">일반</th>
+                                                        <th scope="col" colspan="2">소계</th>
+                                                        <th scope="col" colspan="2">청년창업농</th>
+                                                        <th scope="col" colspan="2">일반</th>
+                                                        <th scope="col" colspan="2">소계</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                        <th scope="col">금일</th>
+                                                        <th scope="col">누적</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>영농일지</td>
+                                                        <td>82</td>
+                                                        <td>3,333</td>
+                                                        <td>100</td>
+                                                        <td>3,333</td>
+                                                        <td>182</td>
+                                                        <td>6,666</td>
+                                                        <td>64</td>
+                                                        <td>3,333</td>
+                                                        <td>66</td>
+                                                        <td>3,333</td>
+                                                        <td>182</td>
+                                                        <td>6,666</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>입출금<br>
+                                                            장부</td>
+                                                        <td>19</td>
+                                                        <td>6,666</td>
+                                                        <td>71</td>
+                                                        <td>6,666</td>
+                                                        <td>90</td>
+                                                        <td>13,332</td>
+                                                        <td>61</td>
+                                                        <td>6,666</td>
+                                                        <td>11</td>
+                                                        <td>6,666</td>
+                                                        <td>90</td>
+                                                        <td>13,332</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>합계</td>
+                                                        <td>101</td>
+                                                        <td>9,999</td>
+                                                        <td>171</td>
+                                                        <td>9,999</td>
+                                                        <td>272</td>
+                                                        <td>19,998</td>
+                                                        <td>125</td>
+                                                        <td>9,999</td>
+                                                        <td>77</td>
+                                                        <td>9,999</td>
+                                                        <td>272</td>
+                                                        <td>19,998</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 영농일지입력현황표 끝 -->
+
+                                        <!-- 도매시장표 시작 -->
+                                        <div class="title-area row mt30 ">
+                                            <h2 class="cell ">도매시장</h2>
+                                            <div class="more-btn more-btn-1 cell-right"><a href="#" title="더보기">더보기</a></div>
+                                        </div>
+                                        <div class="table_wrap">
+                                            <table class="data_table">
+                                                <caption>
+                                                    도매시장데이터 상세보기
+                                                </caption>
+                                                <colgroup>
+                                                    <col style="width:25%" />
+                                                    <col style="width:25%" />
+                                                    <col style="width:25%" />
+                                                    <col style="width:25%" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">도매시장</th>
+                                                        <th scope="col">법인명</th>
+                                                        <th scope="col">미전송시작일</th>
+                                                        <th scope="col">미전송일수</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>춘천도매시장</td>
+                                                        <td>춘천공판장</td>
+                                                        <td>2020-09-01</td>
+                                                        <td>81일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>춘천도매시장</td>
+                                                        <td>춘천청과</td>
+                                                        <td>2020-09-01</td>
+                                                        <td>81일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>전주도매시장</td>
+                                                        <td>전주청과</td>
+                                                        <td>2020-10-10</td>
+                                                        <td>30일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>인천구월도매시장</td>
+                                                        <td>인천청과</td>
+                                                        <td>2020-10-30</td>
+                                                        <td>10일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>수원도매시장</td>
+                                                        <td>춘천공판장</td>
+                                                        <td>2020-11-01</td>
+                                                        <td>9일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>익산도매시장</td>
+                                                        <td>이리청과</td>
+                                                        <td>2020-11-05</td>
+                                                        <td>5일</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>진주도매시장</td>
+                                                        <td>진주청과</td>
+                                                        <td>2020-11-09</td>
+                                                        <td>1일</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- 도매시장표 끝 -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <! -- 컨텐츠 끝 -->
+</body>
+
+</html>
